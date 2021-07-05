@@ -1,5 +1,5 @@
 {
-  "name": "rtcmulticonnection",
+  "name": "@hacksore/rtcmulticonnection",
   "preferGlobal": false,
   "version": "3.7.0",
   "author": {

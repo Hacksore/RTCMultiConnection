@@ -50,9 +50,9 @@ function SocketConnection(connection, connectCallback) {
     }
 
     try {
-        connection.socket = io(connection.socketURL + parameters);
-    } catch (e) {
         connection.socket = io.connect(connection.socketURL + parameters, connection.socketOptions);
+    } catch (e) {
+        console.error(e);
     }
 
     var mPeer = connection.multiPeersHandler;
