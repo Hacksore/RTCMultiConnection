@@ -35,33 +35,33 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'dev/head.js',
-                    'dev/amd.js',
+                    // 'src/head.js',
+                    // 'src/amd.js',
 
-                    'dev/SocketConnection.js', // You can replace it with: FirebaseConnection.js || PubNubConnection.js
-                    'dev/MultiPeersHandler.js',
+                    'src/SocketConnection.js', // You can replace it with: FirebaseConnection.js || PubNubConnection.js
+                    'src/MultiPeersHandler.js',
 
-                    // 'dev/adapter.js', ---- optional
-                    'node_modules/detectrtc/DetectRTC.js', // npm install detectrtc
-                    'dev/globals.js',
+                    // 'src/adapter.js', ---- optional
+                    // 'node_modules/detectrtc/DetectRTC.js', // npm install detectrtc
+                    'src/globals.js',
 
-                    'dev/ios-hacks.js', // to support ios
-                    'dev/RTCPeerConnection.js',
-                    'dev/CodecsHandler.js', // to force H264 or codecs other than opus
+                    // 'src/ios-hacks.js', // to support ios
+                    'src/RTCPeerConnection.js',
+                    // 'src/CodecsHandler.js', // to force H264 or codecs other than opus
 
-                    'dev/OnIceCandidateHandler.js',
-                    'dev/IceServersHandler.js',
+                    'src/OnIceCandidateHandler.js',
+                    'src/IceServersHandler.js',
 
-                    'dev/getUserMedia.js',
-                    'dev/StreamsHandler.js',
+                    'src/getUserMedia.js',
+                    'src/StreamsHandler.js',
 
-                    'dev/TextSenderReceiver.js',
-                    'dev/FileProgressBarHandler.js',
+                    'src/TextSenderReceiver.js',
+                    'src/FileProgressBarHandler.js',
 
-                    'dev/TranslationHandler.js',
+                    'src/TranslationHandler.js',
 
-                    'dev/RTCMultiConnection.js',
-                    'dev/tail.js'
+                    'src/RTCMultiConnection.js',
+                    // 'src/tail.js'
                 ],
                 dest: './temp/RTCMultiConnection.js',
             },
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
             },
         },
         jsbeautifier: {
-            files: ['RTCMultiConnection.js', 'dev/*.js', 'Gruntfile.js', 'node_scripts/*.js', 'admin/js/admin-ui.js'],
+            files: ['RTCMultiConnection.js', 'src/*.js', 'Gruntfile.js', 'node_scripts/*.js', 'admin/js/admin-ui.js'],
             options: {
                 js: {
                     braceStyle: "collapse",
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['dev/*.js'],
+                files: ['src/*.js'],
                 tasks: ['concat', 'replace', 'jsbeautifier', 'uglify', 'copy', 'clean'],
                 options: {
                     spawn: false,

@@ -1,7 +1,7 @@
 // _____________________
 // RTCMultiConnection.js
 
-(function(connection) {
+export const RTCMultiConnection = (function(connection) {
     forceOptions = forceOptions || {
         useDefaultDevices: true
     };
@@ -1854,4 +1854,4 @@
         PUBLIC_IDENTIFIER_MISSING: 'publicRoomIdentifier is required',
         INVALID_ADMIN_CREDENTIAL: 'Invalid username or password attempted'
     };
-})(this);
+});
